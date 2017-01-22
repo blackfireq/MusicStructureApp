@@ -4,26 +4,22 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-import static android.R.attr.onClick;
-
-public class MainActivity extends AppCompatActivity {
+public class Store extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_store);
         //  Categories page
         TextView categories = (TextView) findViewById(R.id.categories);
 
-        categories.setOnClickListener(new OnClickListener() {
+        categories.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Intent categoriesIntent = new Intent(MainActivity.this, Categories.class);
+                Intent categoriesIntent = new Intent(Store.this, Categories.class);
 
                 startActivity(categoriesIntent);
             }
@@ -32,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
         //  Playlists page
         TextView playlists = (TextView) findViewById(R.id.playlists);
 
-        playlists.setOnClickListener(new OnClickListener() {
+        playlists.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Intent playlistsIntent = new Intent(MainActivity.this, Playlists.class);
+                Intent playlistsIntent = new Intent(Store.this, Playlists.class);
 
                 startActivity(playlistsIntent);
             }
@@ -45,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
         //  Stations page
         TextView stations = (TextView) findViewById(R.id.stations);
 
-        stations.setOnClickListener(new OnClickListener() {
+        stations.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Intent stationsIntent = new Intent(MainActivity.this, Stations.class);
+                Intent stationsIntent = new Intent(Store.this, Stations.class);
 
 
                 startActivity(stationsIntent);
@@ -57,13 +53,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //  Store page
-        TextView store = (TextView) findViewById(R.id.store);
+        TextView home = (TextView) findViewById(R.id.home);
 
-        store.setOnClickListener(new OnClickListener() {
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent storeIntent = new Intent(MainActivity.this, Store.class);
-                startActivity(storeIntent);
+                Intent homeIntent = new Intent(Store.this, MainActivity.class);
+                startActivity(homeIntent);
             }
         });
     }

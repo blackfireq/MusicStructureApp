@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_categories"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.android.musicstructureapp.MainActivity">
+    tools:context="com.example.android.musicstructureapp.Categories">
 
     <!--Navigation Start -->
     <LinearLayout
         android:id="@+id/mainControls"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight=".5"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/categories"
+            android:id="@+id/home"
             style="@style/Controls"
-
-            android:text="@string/categories" />
+            android:text="@string/home" />
 
         <TextView
             android:id="@+id/stations"
@@ -36,15 +35,4 @@
             android:text="@string/store" />
     </LinearLayout>
     <!--Navigation End -->
-    <!--Carousel Start -->
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/mainControls"
-        android:gravity="center"
-        android:text="Carousel artWork"
-        android:textSize="45sp" />
-
-
 </RelativeLayout>
