@@ -35,4 +35,9 @@
             android:text="@string/store" />
     </LinearLayout>
     <!--Navigation End -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_below="@id/mainControls"
+        android:layout_height="wrap_content"
+        android:text="this area is for categories"/>
 </RelativeLayout>
